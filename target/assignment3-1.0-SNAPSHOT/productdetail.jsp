@@ -21,14 +21,14 @@
                 DatabaseHolder.USERNAME, DatabaseHolder.PASSWORD)) {
 
             Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM ProductModels");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM employee");
             while (resultSet.next()) {
-                String firstName = resultSet.getNString(1);
-                String lastName = resultSet.getNString(2);
-                String username = resultSet.getNString(3);
-                String password = resultSet.getNString(4);
-                String address = resultSet.getNString(5);
-                String contact = resultSet.getNString(6);
+                String firstName = resultSet.getString(1);
+                String lastName = resultSet.getString(2);
+                String username = resultSet.getString(3);
+                String password = resultSet.getString(4);
+                String address = resultSet.getString(5);
+                String contact = resultSet.getString(6);
                 ProductModel productModel = new ProductModel();
                 productModel.setFirstName(firstName);
                 productModel.setLastName(lastName);
